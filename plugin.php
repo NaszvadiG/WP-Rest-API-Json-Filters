@@ -46,7 +46,7 @@ function my_rest_prepare_post( $data, $post, $request ) {
   $_data = $data->data;
   $thumbnail_id = get_post_thumbnail_id( $post->ID );
   $thumbnail = wp_get_attachment_image_src( $thumbnail_id );
-    $big = wp_get_attachment_image_src( $thumbnail_id, full );
+    $big = wp_get_attachment_image_src( $thumbnail_id, 'full' );
   $_data['featured_image_thumbnail_url'] = $thumbnail[0];
   $_data['featured_image_big_url'] = $big[0];
   
